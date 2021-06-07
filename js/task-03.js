@@ -16,11 +16,6 @@ const images = [
 const ul = document.querySelector('#gallery');
 
 
-const newImg = images.forEach(image => {
-    const li =  document.createElement('li');
-    const newImage =  document.createElement('img');
-    newImage.src = image.url;
-    newImage.alt = image.alt;
-
-ul.insertAdjacentHTML('afterbegin', `<li><img src = "${newImage.src}" alt = "${newImage.alt}" width = 400 heith = 100></li>`);
+images.forEach(image => {
+ul.insertAdjacentHTML('afterbegin', `<li><img src = "${image.url}" alt = "${image.alt}" width = 400 heith = 100></li>`);
 });
