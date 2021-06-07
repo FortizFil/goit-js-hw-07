@@ -16,6 +16,15 @@ const images = [
 const ul = document.querySelector('#gallery');
 
 
-images.forEach(image => {
-ul.insertAdjacentHTML('afterbegin', `<li><img src = "${image.url}" alt = "${image.alt}" width = 400 heith = 100></li>`);
+// images.forEach(image => {
+// ul.insertAdjacentHTML('afterbegin', `<li><img src = "${image.url}" alt = "${image.alt}" width = 400 heith = 100></li>`);
+// });
+
+
+const newList = images.map(image => {
+  const li = (`<li><img src = "${image.url}" alt = "${image.alt}" width = 400 heith = 100></li>`);
+  return li;
 });
+const joinNewList = newList.join(' ')
+ul.insertAdjacentHTML('afterbegin', `${joinNewList}`);
+
