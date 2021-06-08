@@ -7,7 +7,10 @@ function onInputBlur(event) {
  
     if (event.currentTarget.value.length == inputLength) {
         input.classList.remove("invalid");
-       return input.classList.add("valid");
+       input.classList.add("valid");
+    } else {
+        input.classList.add("invalid");
+        input.classList.remov("valid");
     };
-    input.classList.replace("valid", "invalid");
+    
 };
